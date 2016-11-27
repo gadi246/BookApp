@@ -1,0 +1,26 @@
+<main>
+  <h2 class="col-md-offset-3">My Books({{ books.length }})</h2>
+<hr/>
+<section class="row">
+  <div class="col-sm-8 col-md-6 col-md-offset-3" ng-repeat="book in books">
+    <article class="thumbnail list-item">
+      <img src="{{ book.imgUrl }}" alt="..." class="placeholder">
+      <div class="caption">
+        <section ng-hide="selected === book.id">
+          <h2>{{ book.title |  capitalize }} </h2>
+          <h3>Written by {{ book.author }}</h3>
+          <h4> {{ book.date | date : "yyyy-MM-dd" }}</h4>
+        </section>
+
+        <book-form book-item="book" submit-form="submit" selected-book="selected"></book-form>
+
+        <nav class="action-bar" ng-hide="selected === book.id">
+          <a href="" ng-click="editBook(book.id)" role="button"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a>
+          <a href="" role="button" ng-click="delete(book)"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+        </nav>
+      </div>
+    </article>
+  </div>
+</section>
+</main>
+

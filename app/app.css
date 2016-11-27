@@ -1,0 +1,33 @@
+.action-bar {
+  display: none;
+  font-size: 2.3rem;
+  position: absolute;
+  right: 25px;
+  top: 10px;
+}
+.list-item {
+  display: flex;
+  justify-content:flex-start;
+  align-items: flex-start;
+}
+.list-item:hover .action-bar{
+  display: inline;
+}
+.list-item img {
+  margin: 0;
+}
+.list-item .caption {
+  width:50%;
+}
+.placeholder {
+  width: 200px;
+}
+.ng-invalid.ng-dirty {
+  border-color:#FA787E;
+}
+.alert-danger{
+  padding:8px;
+  margin-bottom: 15px;
+}
+
+

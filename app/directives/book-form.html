@@ -1,0 +1,21 @@
+<form ng-show="selectedBook === bookItem.id" name="bookForm" ng-submit="bookForm.$valid&&submitForm()" novalidate>
+  <div ng-messages="bookForm.$error">
+    <div ng-message="required" class="alert alert-danger">You did not enter a field</div>
+  </div>
+  <div ng-messages="bookForm.date.$error">
+    <div ng-message="date" class="alert alert-danger">You did not enter a valid date</div>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" value="bookItem.title" ng-model="bookItem.title" name="myField"  required autofocus/>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" value="bookItem.author" ng-model="bookItem.author" name="author" required/>
+  </div>
+  <div class="form-group">
+    <input type="date" class="form-control" value="bookItem.date" ng-model="bookItem.date" name="date" required/>
+  </div>
+  <div class="form-group">
+    <input type="text/url" class="form-control" value="bookItem.imgUrl" ng-model="bookItem.imgUrl" name="imgUrl" />
+  </div>
+  <input type="submit" class="btn btn-primary"/>
+</form>
